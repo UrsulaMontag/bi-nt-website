@@ -13,6 +13,18 @@ const Nav = () => {
         <li>
           <Link href="/contact">Kontakt</Link>
         </li>
+        <li>
+          <Link href="/events">Events</Link>
+        </li>
+        <li>
+          <Link href="/news">Aktuelles</Link>
+        </li>
+        <li>
+          <Link href="/pictures">Bilder</Link>
+        </li>
+        <li>
+          <Link href="/videos">Videos</Link>
+        </li>
       </ul>
     </nav>
   );
