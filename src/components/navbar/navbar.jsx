@@ -1,32 +1,49 @@
 import Link from "next/link";
+import React, { useState } from "react";
+import { NavContainer, NavItem, NavList, HamburgerMenu } from "./navbar.styled";
 
 const Nav = () => {
+  const [showNav, setShowNav] = useState(false);
+
+  const toggleNav = () => {
+    setShowNav(!showNav);
+  };
   return (
-    <nav>
-      <ul>
-        <li>
+    <NavContainer>
+      <HamburgerMenu
+        showNav={showNav}
+        className={showNav ? "active" : ""}
+        onClick={toggleNav}
+      >
+        <span className="hamburger-bar"></span>
+        <span className="hamburger-bar"></span>
+        <span className="hamburger-bar"></span>
+        <span className="close-icon"></span>
+      </HamburgerMenu>
+      <NavList showNav={showNav}>
+        <NavItem>
           <Link href="/">index</Link>
-        </li>
-        <li>
+        </NavItem>
+        <NavItem>
           <Link href="/about-us">Über uns</Link>
-        </li>
-        <li>
+        </NavItem>
+        <NavItem>
           <Link href="/contact">Kontakt</Link>
-        </li>
-        <li>
+        </NavItem>
+        <NavItem>
           <Link href="/events">Events</Link>
-        </li>
-        <li>
+        </NavItem>
+        <NavItem>
           <Link href="/news">Aktuelles</Link>
-        </li>
-        <li>
+        </NavItem>
+        <NavItem>
           <Link href="/pictures">Bilder</Link>
-        </li>
-        <li>
+        </NavItem>
+        <NavItem>
           <Link href="/videos">Videos</Link>
-        </li>
-      </ul>
-    </nav>
+        </NavItem>
+      </NavList>
+    </NavContainer>
   );
 };
 

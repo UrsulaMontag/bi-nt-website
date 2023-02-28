@@ -17,6 +17,8 @@
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
-    "@types/regenerator-runtime": "^0.13.1"
+    "@types/react": "^18.0.28",
+    "@types/regenerator-runtime": "^0.13.1",
+    "@types/styled-components": "^5.1.26"
   }
 }
