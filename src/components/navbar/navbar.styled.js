@@ -32,6 +32,29 @@ export const NavList = styled.ul`
   }
 `;
 
+export const NavSubList = styled.ul`
+  display: ${(props) => (props.showSubNav ? "flex" : "none")};
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+  transform: ${({ showNav }) =>
+    showNav ? "translateX(0)" : "translateX(-100%)"};
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
+
 export const NavItem = styled.li`
   padding: 1rem;
 `;
