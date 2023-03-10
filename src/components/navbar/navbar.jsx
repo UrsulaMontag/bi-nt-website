@@ -22,25 +22,39 @@ const Nav = () => {
       </HamburgerMenu>
       <NavList showNav={showNav}>
         <NavItem>
-          <Link href="/">index</Link>
+          <Link href="/" onClick={toggleNav}>
+            Home
+          </Link>
         </NavItem>
         <NavItem>
-          <Link href="/about-us">Über uns</Link>
+          <Link href="/about-us" onClick={toggleNav}>
+            Über uns
+          </Link>
         </NavItem>
         <NavItem>
-          <Link href="/contact">Kontakt</Link>
+          <Link href="/contact" onClick={toggleNav}>
+            Kontakt
+          </Link>
         </NavItem>
         <NavItem>
-          <Link href="/events">Events</Link>
+          <Link href="/events" onClick={toggleNav}>
+            Events
+          </Link>
         </NavItem>
         <NavItem>
-          <Link href="/news">Aktuelles</Link>
+          <Link href="/news" onClick={toggleNav}>
+            Aktuelles
+          </Link>
         </NavItem>
         <NavItem>
-          <Link href="/pictures">Bilder</Link>
+          <Link href="/pictures" onClick={toggleNav}>
+            Bilder
+          </Link>
         </NavItem>
         <NavItem>
-          <Link href="/videos">Videos</Link>
+          <Link href="/videos" onClick={toggleNav}>
+            Videos
+          </Link>
         </NavItem>
       </NavList>
     </NavContainer>

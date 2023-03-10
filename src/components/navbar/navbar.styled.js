@@ -4,6 +4,9 @@ export const NavContainer = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 768px) {
+    align-self: flex-end;
+  }
 `;
 
 export const NavList = styled.ul`
