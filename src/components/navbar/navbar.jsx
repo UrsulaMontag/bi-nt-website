@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { NavContainer, NavItem, NavList, HamburgerMenu } from "./navbar.styled";
+import { withRouter } from "next/router";
 
 const pages = {
   "/": [],
@@ -31,6 +32,7 @@ const Nav = () => {
   const handleLinkClick = (path) => {
     setCurrentPath(path);
     setShowNav(false);
+    setSubShowNav(false);
   };
 
   const generateNavLinks = (currentPath) => {
@@ -39,20 +41,24 @@ const Nav = () => {
 
       return (
         <NavItem key={path}>
-          <Link href={path}>
-            <a
-              className={currentPath === path ? "active" : ""}
-              onClick={() => handleLinkClick(path)}
-            >
-              {path}
-            </a>
+          <Link
+            href={path}
+            passHref
+            className={currentPath === path ? "active" : ""}
+            onClick={() => handleLinkClick(path)}
+          >
+            {path}
           </Link>
           {hasSubNav && (
             <ul>
               {pages[path].map((subPage) => (
                 <NavItem key={subPage.path}>
-                  <Link href={path + subPage.path}>
-                    <a onClick={toggleSubNav}>{subPage.label}</a>
+                  <Link
+                    href={path + subPage.path}
+                    passHref
+                    onClick={() => handleLinkClick(path)}
+                  >
+                    {subPage.label}
                   </Link>
                 </NavItem>
               ))}
@@ -64,8 +70,9 @@ const Nav = () => {
   };
 
   return (
-    <NavContainer>
+    <NavContainer key="NavContainer">
       <HamburgerMenu
+        key="HamburgerMenu"
         showNav={showNav}
         className={showNav ? "active" : ""}
         onClick={toggleNav}
@@ -79,5 +86,5 @@ const Nav = () => {
     </NavContainer>
   );
 };
-
-export default Nav;
+const NavWithRouter = withRouter(Nav);
+export default NavWithRouter;

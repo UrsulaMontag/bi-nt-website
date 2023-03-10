@@ -1,10 +1,10 @@
-import Nav from "../navbar/navbar";
+import NavWithRouter from "../navbar/navbar";
 import LayoutStyled from "./layout.styled";
 
 export default function Layout({ children }) {
   return (
     <LayoutStyled>
-      <Nav />
+      <NavWithRouter />
       <main>{children}</main>
     </LayoutStyled>
   );

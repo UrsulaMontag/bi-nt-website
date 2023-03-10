@@ -115,3 +115,5 @@ export const HamburgerMenu = styled.div`
     }
   }
 `;
+NavContainer.displayName = "NavContainer";
+HamburgerMenu.displayName = "HamburgerMenu";
