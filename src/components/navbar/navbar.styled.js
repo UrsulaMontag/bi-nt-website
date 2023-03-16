@@ -10,13 +10,12 @@ export const NavContainer = styled.nav`
 `;
 
 export const NavList = styled.ul`
-  display: ${(props) => (props.showNav ? "flex" : "none")};
+  display: ${(props) => (props.showNav || props.showSubNav ? "flex" : "none")};
   flex-direction: column;
-  align-items: center;
   list-style-type: none;
   margin: 0;
-  padding: 0;
-  justify-content: center;
+  padding-top: 3rem;
+  justify-content: flex-start;
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -35,21 +34,17 @@ export const NavList = styled.ul`
 export const NavSubList = styled.ul`
   display: ${(props) => (props.showSubNav ? "flex" : "none")};
   flex-direction: column;
-  align-items: center;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  height: 100vh;
+  margin-left: 3rem;
+  padding-top: 2rem;
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
+  max-height: 80vh;
+  overflow-y: auto;
   background-color: #fff;
   transition: transform 0.3s ease-in-out;
-  transform: ${({ showNav }) =>
-    showNav ? "translateX(0)" : "translateX(-100%)"};
-
+  transform: ${({ showSubNav }) =>
+    showSubNav ? "translateX(0)" : "translateX(-100%)"};
+  z-index: 2;
   @media (min-width: 768px) {
     flex-direction: row;
   }
@@ -57,8 +52,10 @@ export const NavSubList = styled.ul`
 
 export const NavItem = styled.li`
   padding: 1rem;
+  .link {
+    text-decoration: none;
+  }
 `;
-
 export const HamburgerMenu = styled.div`
   align-self: flex-end;
   cursor: pointer;

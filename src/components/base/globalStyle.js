@@ -17,10 +17,20 @@ const GlobalStyle = createGlobalStyle`
 
   body {
       font-size: 1.6rem;
-      position: relative;
+      overflow: hidden;
     
   }
-  
+  :root {
+    --bg-color-light:  #edf3e1;
+    --color-light: #F2BB13;
+    --text-color-dark: #1d3041;
+    --headline-little:  #283301;
+    --button-bg-color: #F2BB13;
+    --detail-color: #7AA61B;
+    --color-dark: #283301;
+    --shadow: #1d304160;
+    --color-warning-red: #8C4E03;
+      }
   
 `;
 

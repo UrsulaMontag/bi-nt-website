@@ -1,6 +1,12 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import { NavContainer, NavItem, NavList, HamburgerMenu } from "./navbar.styled";
+import {
+  NavContainer,
+  NavItem,
+  NavList,
+  HamburgerMenu,
+  NavSubList,
+} from "./navbar.styled";
 import { withRouter } from "next/router";
 
 const pages = {
@@ -16,7 +22,7 @@ const pages = {
       { path: "/flora-fauna", label: "Flora und Fauna" },
       { path: "/history", label: "Geschichte" },
     ],
-    label: "Bilder",
+    label: "Hintergrund Informationen",
   },
   "/donations": { path: [], label: "Spenden" },
   "/contact": { path: [], label: "Kontakt" },
@@ -25,17 +31,33 @@ const Nav = () => {
   const [showNav, setShowNav] = useState(false);
   const [showSubNav, setSubShowNav] = useState(false);
   const [currentPath, setCurrentPath] = useState("");
+  const [activeParentNavItem, setActiveParentNavItem] = useState(null);
+  const [activeSubNavItem, setActiveSubNavItem] = useState(null);
 
   const toggleNav = () => {
     setShowNav(!showNav);
+    setSubShowNav(false);
+    setActiveParentNavItem(null);
+    setActiveSubNavItem(null);
   };
-  const toggleSubNav = () => {
+  const toggleSubNav = (path) => {
+    setActiveParentNavItem(path);
     setSubShowNav(!showSubNav);
+    setActiveSubNavItem(null);
   };
 
   const handleLinkClick = (path) => {
     setCurrentPath(path);
-    toggleSubNav();
+    const page = pages[path];
+    const hasSubNav = page?.path && page?.path.length > 0;
+    if (hasSubNav) {
+      toggleSubNav();
+    } else {
+      toggleNav();
+    }
+  };
+  const handleSubNavClick = (path) => {
+    setActiveSubNavItem(path);
     toggleNav();
   };
 
@@ -48,31 +70,40 @@ const Nav = () => {
 
         return (
           <NavItem key={path}>
-            <Link
-              href={path}
-              passHref
-              className={currentPath === path ? "active" : ""}
-              onClick={() => handleLinkClick(path)}
+            <div
+              onClick={() => {
+                toggleSubNav(path);
+              }}
             >
-              {page?.label || path}
-            </Link>
+              <Link
+                href={path}
+                className={`${currentPath === path ? "active" : ""}, link`}
+                onClick={() => {
+                  handleLinkClick(path);
+                }}
+              >
+                {page?.label || path}
+              </Link>
+            </div>
             {hasSubNav && (
-              <ul>
+              <NavSubList
+                showSubNav={activeParentNavItem === path ? showSubNav : false}
+              >
                 {page.path.map((subPage) => (
-                  <NavItem key={subPage.path}>
+                  <NavItem key={subPage.path} id={subPage.path}>
                     <Link
                       href={path + subPage.path}
                       passHref
-                      onClick={() => handleLinkClick(path + subPage.path)}
-                      className={
+                      onClick={() => handleSubNavClick(path + subPage.path)}
+                      className={`${
                         currentPath === path + subPage.path ? "active" : ""
-                      }
+                      }, link`}
                     >
                       {subPage.label}
                     </Link>
                   </NavItem>
                 ))}
-              </ul>
+              </NavSubList>
             )}
           </NavItem>
         );

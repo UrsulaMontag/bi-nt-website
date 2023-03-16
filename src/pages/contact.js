@@ -1,4 +1,5 @@
+import Impressum from "@/components/impressum/impressum";
+
 export default function Contact() {
-    return <h1>Kontakt</h1>;
-  }
-  
+  return <Impressum />;
+}

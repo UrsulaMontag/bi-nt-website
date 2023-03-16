@@ -1,4 +1,5 @@
-export default function Pictures() {
-    return <h1>Bilder</h1>;
-  }
-  
+import Pictures from "@/components/pictures/pictures";
+
+export default function pictures() {
+  return <Pictures />;
+}
