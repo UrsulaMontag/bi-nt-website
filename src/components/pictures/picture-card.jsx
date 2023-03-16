@@ -1,15 +1,15 @@
 import Image from "next/image";
 
 export default function PictureCard({ picture }) {
-  const imagePath = `/Bilder/${picture.img}`;
   return (
     <figure>
       <Image
-        src={imagePath}
+        src={picture.img}
         alt="informational image"
         layout="responsive"
         width={picture.width}
         height={picture.height}
+        max-width="100%"
       />
       <figcaption>{picture.description}</figcaption>
     </figure>
