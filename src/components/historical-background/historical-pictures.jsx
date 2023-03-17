@@ -3,7 +3,6 @@ import PictureCard from "./picture-card";
 import { StyledPicturesSlider, StyledPicturesGallery } from "./pictures.styled";
 import { useState } from "react";
 import Typography from "../base/typography";
-import { ContentContainerFlexColumnGap } from "../base/content-containerFlexColumnGap.styled";
 
 export default function Pictures() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -14,8 +13,10 @@ export default function Pictures() {
   };
 
   return (
-    <ContentContainerFlexColumnGap>
-      <Typography variant={"h1"}>Bilder-Sammlung vom Gelände</Typography>
+    <>
+      <Typography variant={"h3"}>
+        Bilder-Sammlung historischer Aufnahmen
+      </Typography>
       <StyledPicturesSlider selectedIndex={selectedIndex}>
         {/**slider for mobile devices */}
         <div className="slider">
@@ -61,6 +62,6 @@ export default function Pictures() {
           </div>,
         ])}
       </StyledPicturesGallery>
-    </ContentContainerFlexColumnGap>
+    </>
   );
 }

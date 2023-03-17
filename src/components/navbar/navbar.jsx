@@ -79,7 +79,7 @@ const Nav = () => {
                 href={path}
                 className={`${currentPath === path ? "active" : ""}, link`}
                 onClick={() => {
-                  handleLinkClick(path);
+                  !hasSubNav && handleLinkClick(path);
                 }}
               >
                 {page?.label || path}

@@ -1,7 +1,10 @@
+import { ContentContainerFlexColumnGap } from "../base/content-containerFlexColumnGap.styled";
+import Typography from "../base/typography";
+
 export default function Impressum() {
   return (
-    <section>
-      <h3>Kontakt</h3>
+    <ContentContainerFlexColumnGap>
+      <Typography variant={"h3"}>Kontakt</Typography>
       <div>
         <p>Tobias Metzger</p>
         <p>Rellinghauser Str. 6</p>
@@ -16,6 +19,6 @@ export default function Impressum() {
           erreichen:
         </p>
       </div>
-    </section>
+    </ContentContainerFlexColumnGap>
   );
 }

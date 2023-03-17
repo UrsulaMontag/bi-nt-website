@@ -1,4 +1,5 @@
-export default function News() {
-    return <h1>Aktuelles</h1>;
-  }
-  
+import News from "@/components/news/news";
+
+export default function news() {
+  return <News />;
+}

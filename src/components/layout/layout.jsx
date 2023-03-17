@@ -1,10 +1,10 @@
-import NavWithRouter from "../navbar/navbar";
+import Header from "../header/header";
 import LayoutStyled from "./layout.styled";
 
 export default function Layout({ children }) {
   return (
     <LayoutStyled>
-      <NavWithRouter />
+      <Header />
       <main>{children}</main>
     </LayoutStyled>
   );

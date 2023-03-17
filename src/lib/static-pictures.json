@@ -1,77 +1,77 @@
 [
   {
     "id": 1,
-    "img": "/IMG_1988.JPG",
+    "img": "/Bilder/IMG_1988.JPG",
     "description": "Umgesägter Baum. Erste Fällarbeiten auf dem Gelände.",
     "width": 2592,
     "height": 1728
   },
   {
     "id": 2,
-    "img": "/IMG_1995.JPG",
+    "img": "/Bilder/IMG_1995.JPG",
     "description": "Umgesägte Bäume. Erste Fällarbeiten auf dem Gelände.",
     "width": 2592,
     "height": 1728
   },
   {
     "id": 3,
-    "img": "/IMG_1997.JPG",
+    "img": "/Bilder/IMG_1997.JPG",
     "description": "Gelände mit Spielplatz.",
     "width": 2592,
     "height": 1728
   },
   {
     "id": 4,
-    "img": "/IMG_2037.JPG",
+    "img": "/Bilder/IMG_2037.JPG",
     "description": "Baumstumpf. Erste Fällarbeiten auf dem Gelände.",
     "width": 2592,
     "height": 1728
   },
   {
     "id": 5,
-    "img": "/IMG_2044.JPG",
+    "img": "/Bilder/IMG_2044.JPG",
     "description": "Blick auf 'Villa Rustica'.",
     "width": 2592,
     "height": 1728
   },
   {
     "id": 6,
-    "img": "/IMG_2046.JPG",
+    "img": "/Bilder/IMG_2046.JPG",
     "description": "Alter Zaun entlang Gelände.",
     "width": 2592,
     "height": 1728
   },
   {
     "id": 7,
-    "img": "/IMG_2051.JPG",
+    "img": "/Bilder/IMG_2051.JPG",
     "description": "Altes Tor. Eingewachsen.",
     "width": 2592,
     "height": 1728
   },
   {
     "id": 8,
-    "img": "/IMG_2745.JPG",
+    "img": "/Bilder/IMG_2745.JPG.jpg",
     "description": "Gelände mit Spielplatz im Schnee.",
     "width": 4032,
     "height": 3024
   },
   {
     "id": 9,
-    "img": "/IMG_20230312_104147.JPG",
+    "img": "/Bilder/IMG_20230312_104147.JPG",
     "description": "Ansicht Bäume Gelände.",
     "width": 2600,
     "height": 4624
   },
   {
     "id": 10,
-    "img": "/IMG_20230312_104411.JPG",
+    "img": "/Bilder/IMG_20230312_104411.JPG",
     "description": "Blick auf 'Villa Rustica' vom vorbeiführenden Weg.",
     "width": 2600,
     "height": 4624
   },
   {
     "id": 11,
-    "img": "/IMG_20230312_104230.JPG",
+    "img": "/Bilder/IMG_20230312_104230.JPG",
     "description": "Blick vom Gelände auf angrenzende Wohnhäuser.",
     "width": 4624,
     "height": 2600

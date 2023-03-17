@@ -3,13 +3,12 @@ import styled from "styled-components";
 export const NavContainer = styled.nav`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  @media (max-width: 768px) {
-    align-self: flex-end;
-  }
+  align-items: flex-start;
 `;
 
 export const NavList = styled.ul`
+  z-index: 200;
+
   display: ${(props) => (props.showNav || props.showSubNav ? "flex" : "none")};
   flex-direction: column;
   list-style-type: none;
@@ -18,10 +17,10 @@ export const NavList = styled.ul`
   justify-content: flex-start;
   height: 100vh;
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color: var(--color-light);
   transition: transform 0.3s ease-in-out;
   transform: ${({ showNav }) =>
     showNav ? "translateX(0)" : "translateX(-100%)"};
@@ -60,7 +59,7 @@ export const HamburgerMenu = styled.div`
   align-self: flex-end;
   cursor: pointer;
   color: black;
-  margin: 2rem;
+  margin: 4px 2px 0 0;
 
   > .hamburger-bar {
     display: block;

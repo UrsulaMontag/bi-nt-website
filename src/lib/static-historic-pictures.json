@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "img": "/Bilder/historisches/historisch1.png",
+    "description": "Luftaufnahme Altes Zementwerk.",
+    "copyright": "©Company Archives & History Communication HeidelbergCement AG 69181 Leimen",
+    "commit": "Verwendung durch Dritte nicht gestattet.",
+    "width": 1050,
+    "height": 688
+  },
+  {
+    "id": 2,
+    "img": "/Bilder/historisches/historisch2.png",
+    "description": "Luftaufnahme Altes Zementwerk",
+    "copyright": "©Company Archives & History Communication HeidelbergCement AG 69181 Leimen",
+    "width": 733,
+    "height": 1050
+  },
+  {
+    "id": 3,
+    "img": "/Bilder/historisches/historisch3.png",
+    "description": "Luftaufnahme Altes Zementwerk",
+    "copyright": "©Company Archives & History Communication HeidelbergCement AG 69181 Leimen",
+    "width": 1050,
+    "height": 746
+  },
+  {
+    "id": 4,
+    "img": "/Bilder/historisches/historisch3_linkerUntererRandZiegelei.png",
+    "description": "Luftaufnahme Altes Zementwerk und 'Alte Ziegelei' am linken unteren Rand.",
+    "copyright": "©Company Archives & History Communication HeidelbergCement AG 69181 Leimen",
+    "width": 1050,
+    "height": 692
+  }
+]

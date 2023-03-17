@@ -1,14 +1,10 @@
+import { ContentContainerFlexColumnGap } from "@/components/base/content-containerFlexColumnGap.styled";
 import Typography from "@/components/base/typography";
 
 export default function Alternatives() {
   return (
-    <section>
-      <Typography variant={"h2"}>Bürger*innen-Initiative</Typography>
-      <Typography variant={"h2"}>Wurzeln im Beton</Typography>
-      <Typography variant={"info-head"}>
-        Ökologische und soziale Lösungen gemeinsam denken
-      </Typography>
-      <h3>Unsere Alternativen</h3>
+    <ContentContainerFlexColumnGap>
+      <Typography variant={"h1"}>Unsere Alternativen</Typography>
       <div>
         <h4>keine ahnung überschrift</h4>
         <p>
@@ -29,6 +25,6 @@ export default function Alternatives() {
         </p>
         <a href="#">hier unter anderem pdf zu konzeptentwurf</a>
       </div>
-    </section>
+    </ContentContainerFlexColumnGap>
   );
 }
