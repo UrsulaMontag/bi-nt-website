@@ -1,3 +1,5 @@
-export default function History() {
-  return <h1>Geschichte</h1>;
+import History from "@/components/infos/background/history";
+
+export default function history() {
+  return <History />;
 }

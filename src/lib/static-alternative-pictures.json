@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "img": "/pdf/folie3.jpg",
+    "description": "Zwei wertvolle Grundstücke in Nürtingen!",
+    "copyright": "©Google",
+    "commit": "",
+    "width": 996,
+    "height": 537
+  },
+  {
+    "id": 2,
+    "img": "/pdf/folie4.jpg",
+    "description": "Zwei wertvolle Grundstücke in Nürtingen!",
+    "copyright": "©Google",
+    "commit": "",
+    "width": 999,
+    "height": 537
+  },
+  {
+    "id": 3,
+    "img": "/pdf/folie5.jpg",
+    "description": "Vergleichbare Größenordnungen",
+    "copyright": "©Google",
+    "commit": "",
+    "width": 1000,
+    "height": 581
+  },
+  {
+    "id": 4,
+    "img": "/pdf/folie6.jpg",
+    "description": "Altes Zementwerk: ineffiziente Flächennutzung, gefährlich für die Zukunft",
+    "copyright": "©Google",
+    "commit": "",
+    "width": 1000,
+    "height": 603
+  },
+  {
+    "id": 5,
+    "img": "/pdf/folie7.jpg",
+    "description": "Alte Ziegelei: Naherholung und wertvolles Biotop",
+    "copyright": "©Google",
+    "commit": "",
+    "width": 993,
+    "height": 599
+  },
+  {
+    "id": 6,
+    "img": "/pdf/folie10.jpg",
+    "description": "Alte Ziegelei: behutsame Nutzung erlaubt Mehrwert für alle – Mensch und Natur",
+    "copyright": "©Google",
+    "commit": "",
+    "width": 999,
+    "height": 466
+  },
+  {
+    "id": 7,
+    "img": "/pdf/folie11.jpg",
+    "description": "Alte Ziegelei: zum Beispiel Kinder- und Jugendfarm",
+    "copyright": "©Google",
+    "commit": "",
+    "width": 1000,
+    "height": 462
+  },
+  {
+    "id": 8,
+    "img": "/pdf/folie13.jpg",
+    "description": "Areal Altes Zementwerk: Neugestaltung für Wohnen, Ökologie, Ästhetik",
+    "copyright": "©Google",
+    "commit": "",
+    "width": 999,
+    "height": 627
+  },
+  {
+    "id": 9,
+    "img": "/pdf/folie14.jpg",
+    "description": "Areal Altes Zementwerk: Optimierte Flächennutzung, architektonisches Highlight",
+    "copyright": "©Google",
+    "commit": "",
+    "width": 998,
+    "height": 628
+  },
+  {
+    "id": 10,
+    "img": "/pdf/folie15.jpg",
+    "description": "Skizzierter Querschnitt (Beispiel)",
+    "copyright": "",
+    "commit": "",
+    "width": 934,
+    "height": 656
+  },
+  {
+    "id": 11,
+    "img": "/pdf/folie16_1_B_cBoeri-Studio_Vertical-Forest_ph.Dimitar-Harizanov_MilanItaly_stylepark.jpg",
+    "description": "Mailand",
+    "copyright": "©Boeri Studio | Dimitar Harizanov",
+    "commit": "",
+    "width": 1410,
+    "height": 940
+  },
+  {
+    "id": 12,
+    "img": "/pdf/folie16_3_parkroyal-packering-singaapore.jpg",
+    "description": "Singapore",
+    "copyright": "©Parkroyal Packering Singapore, unsplash",
+    "commit": "",
+    "width": 275,
+    "height": 183
+  },
+  {
+    "id": 13,
+    "img": "/pdf/folie16_hundertwasserhaus_wien_0x77BAF7936BDDAD69EF2D96E1B4460C20.jpg",
+    "description": "Wien",
+    "copyright": "©https://vonortzuort.reisen/oesterreich/wien/hundertwasserhaus-in-wien/",
+    "commit": "",
+    "width": 800,
+    "height": 564
+  },
+  {
+    "id": 14,
+    "img": "/pdf/folie17_1_hundertwasser_darmstadt.jpg",
+    "description": "Darmstadt",
+    "copyright": "©Balles Medien e.K",
+    "commit": "",
+    "width": 400,
+    "height": 300
+  },
+  {
+    "id": 15,
+    "img": "/pdf/folie17_3_bangkok.jpg",
+    "description": "Bangkok",
+    "copyright": "©Prapan Napawongdee",
+    "commit": "",
+    "width": 1292,
+    "height": 1000
+  },
+  {
+    "id": 16,
+    "img": "/pdf/folie17_singapore_greenhotel.jpg",
+    "description": "Singapore",
+    "copyright": "©https://i.imgur.com/zqEBII4.jpg",
+    "commit": "",
+    "width": 700,
+    "height": 525
+  },
+  {
+    "id": 17,
+    "img": "/pdf/folie18_Steinhaus,_Rogner_Bad_Blumau_von_Friedensreich_Hundertwasser.jpg",
+    "description": "Bad Blumau",
+    "copyright": "©Renate Oberinger",
+    "commit": "",
+    "width": 800,
+    "height": 450
+  }
+]

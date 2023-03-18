@@ -1,21 +1,19 @@
-import { getPictures } from "@/services/get-pictures";
 import PictureCard from "./picture-card";
 import { StyledPicturesSlider, StyledPicturesGallery } from "./pictures.styled";
 import { useState } from "react";
-import Typography from "../base/typography";
 import { ContentContainerFlexColumnGap } from "../base/content-containerFlexColumnGap.styled";
 
-export default function Pictures() {
+export default function Pictures({ pictures }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const pictures = getPictures();
 
   const handleInputChange = (index) => {
+    console.log("selectedIndex", selectedIndex);
     setSelectedIndex(index);
+    console.log("new index", index);
   };
 
   return (
     <ContentContainerFlexColumnGap>
-      <Typography variant={"h1"}>Bilder-Sammlung vom Gelände</Typography>
       <StyledPicturesSlider selectedIndex={selectedIndex}>
         {/**slider for mobile devices */}
         <div className="slider">
@@ -33,7 +31,10 @@ export default function Pictures() {
                   name="slider"
                   id={`slide-${index}`}
                   checked={selectedIndex === index}
-                  onChange={() => handleInputChange(index)}
+                  onChange={() => {
+                    handleInputChange(index);
+                    console.log("index", index);
+                  }}
                 />
               </label>
             ))}

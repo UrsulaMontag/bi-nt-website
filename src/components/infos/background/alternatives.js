@@ -1,72 +1,150 @@
 import { ContentContainerFlexColumnGap } from "@/components/base/content-containerFlexColumnGap.styled";
 import Typography from "@/components/base/typography";
-import pdfjsLib from "pdfjs-dist";
-import { useEffect, useRef, useState } from "react";
+import PictureCard from "@/components/pictures/picture-card";
+import Pictures from "@/components/pictures/pictures";
+import { getPdfAlternatePics } from "@/services/get-pdf-alternate-pics";
 
 export default function Alternatives() {
-  const [pageNum, setPageNum] = useState(1);
-  const canvasRef = useRef(null);
-
-  const loadPdf = async () => {
-    const pdfPath = "/StandortvorschlagAlteZiegeleiNov2022.pdf"; // specify the path of your PDF file in the public folder
-    const response = await fetch(pdfPath);
-    const data = await response.arrayBuffer();
-    const pdf = await pdfjsLib.getDocument({ data }).promise;
-    const pageCount = pdf.numPages;
-    setNumPages(pageCount);
-    setPageNumber(1);
-    setPdf(pdf);
-  };
-
-  useEffect(() => {
-    const renderPage = async () => {
-      const pdfDocument = await loadPdf();
-      const page = await pdfDocument.getPage(pageNum);
-      const viewport = page.getViewport({ scale: 1 });
-      const canvas = canvasRef.current;
-      const context = canvas.getContext("2d");
-      canvas.width = viewport.width;
-      canvas.height = viewport.height;
-      const renderContext = {
-        canvasContext: context,
-        viewport: viewport,
-      };
-      await page.render(renderContext);
-    };
-    renderPage();
-  }, [pageNum]);
-
-  const handlePrevPage = () => {
-    setPageNum(Math.max(pageNum - 1, 1));
-  };
-
-  const handleNextPage = () => {
-    setPageNum(pageNum + 1);
-  };
+  const pictures = getPdfAlternatePics();
+  const picturesConcept = pictures.filter((pic) => pic.id > 0 && pic.id < 6);
+  const picturesChildFarm = pictures.filter(
+    (pic) => pic.id === 6 || pic.id === 7
+  );
+  const picturesNewLiving = pictures.filter((pic) => pic.id > 7 && pic.id < 10);
+  const picturesGoodExample = pictures.filter(
+    (pic) => pic.id > 10 && pic.id < 18
+  );
+  const pictureCrossSection = pictures.find((pic) => pic.id === 10);
 
   return (
     <ContentContainerFlexColumnGap>
       <Typography variant={"h1"}>Unsere Alternativen</Typography>
+      <Typography variant={"h2"}>
+        Konzeptentwurf Alte Ziegelei und Zementwerk Nürtingen
+      </Typography>
       <div>
-        <h4>keine ahnung überschrift</h4>
-        <canvas ref={canvasRef} />
+        <Typography variant={"h3"}>
+          Gegenüberstellung Alte Ziegelei vs. Zementwerk
+        </Typography>
+        <Pictures pictures={picturesConcept} />
+      </div>
+      <section>
         <div>
-          <button onClick={handlePrevPage}>Prev Page</button>
-          <span>{pageNum}</span>
-          <button onClick={handleNextPage}>Next Page</button>
+          <Typography variant={"h3"}>Zementwerk</Typography>
+          <ul>
+            <li>
+              <Typography variant={"info"}>
+                Bereits großflächig versiegelt
+              </Typography>
+            </li>
+            <li>
+              <Typography variant={"info"}>
+                Ineffiziente Platznutzung durch großflächige Parkräume und
+                Bungalow-Bauten Lidl, Dialysezentrum und Autohaus
+              </Typography>
+              <ul>
+                <li>
+                  <Typography variant={"info"}>
+                    Trägt zur Überhitzung der Stadt bei
+                  </Typography>
+                </li>
+                <li>
+                  <Typography variant={"info"}>
+                    Trägt zur Begünstigung von Hochwasser bei Starkregen bei
+                  </Typography>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <Typography variant={"info"}>
+                Wenig attraktives Eingangstor nach Nürtingen aus Richtung
+                Reutlingen, Metzingen
+              </Typography>
+            </li>
+            <li>
+              <Typography variant={"info"}>
+                Direkte Anbindung zum Neckarufer und Innenstadt
+              </Typography>
+            </li>
+            <li>
+              <Typography variant={"info"}>
+                Direkte Anbindung an Grünflächen südlich der Bahnlinie schaffbar
+              </Typography>
+            </li>
+            <li>
+              <Typography variant={"info"}>
+                Direkte Anbindung an öffentlichen Nahverkehr (Bus)
+              </Typography>
+            </li>
+            <li>
+              <Typography variant={"info"}>
+                Unmittelbare Nähe zu Einkaufs- und Gesundheitseinrichtungen
+                (Lidl, Dialyse, Fitness)
+              </Typography>
+            </li>
+          </ul>
         </div>
-        <a href="#">hier unter anderem pdf zu konzeptentwurf</a>
-      </div>
-      <div>
-        <h4>keine ahnung überschrift</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-          corporis similique ratione! Ex maxime corrupti magnam numquam quia
-          omnis error vitae quo ipsa quaerat natus accusamus excepturi fugiat,
-          fugit illo.
-        </p>
-        <a href="#">hier unter anderem pdf zu konzeptentwurf</a>
-      </div>
+
+        <div>
+          <Typography variant={"h3"}>Alte Ziegelei</Typography>
+          <ul>
+            <li>
+              <Typography variant={"info"}>
+                Bebauung zerstört wertvolle Frischluftschneise und
+                Regenrückhaltung
+              </Typography>
+            </li>
+            <li>
+              <Typography variant={"info"}>
+                Bebauung zerstört gerne von Jung und Alt genutztes
+                Naherholungsgebiet
+              </Typography>
+            </li>
+            <li>
+              <Typography variant={"info"}>
+                Gelände hat schlecht erreichbare Anbindung an öffentlichen
+                Nahverkehr, die aufgrund der Lage auch nicht geschaffen werden
+                kann
+              </Typography>
+            </li>
+            <li>
+              <Typography variant={"info"}>
+                Gelände hat schlechte Anbindung an Innenstadt,
+                Einkaufsmöglichkeiten, Neckar etc. (nur mit Auto oder auf
+                Umwegen zu erreichen, da Unterführung nach Kleintischardt mit
+                Treppenab-/-aufgängen)
+              </Typography>
+            </li>
+            <li>
+              <Typography variant={"info"}>
+                Gelände bietet bei behutsamer Planung großes Potential für
+                Kinder- und Jugendfarm
+              </Typography>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <Typography variant={"h3"}>
+          Konzeptvorschlag Alte Ziegelei | Kinder- und Jugendfarm
+        </Typography>
+        <Pictures pictures={picturesChildFarm} />
+      </section>
+      <section>
+        <Typography variant={"h3"}>
+          Konzeptvorschlag Neugestaltung Altes Zementwerk
+        </Typography>
+        <Pictures pictures={picturesNewLiving} />
+      </section>
+      <section>
+        <PictureCard picture={pictureCrossSection} />
+      </section>
+      <section>
+        <Typography variant={"h3"}>
+          International beachtete Beispiele aus aller Welt
+        </Typography>
+        <Pictures pictures={picturesGoodExample} />
+      </section>
     </ContentContainerFlexColumnGap>
   );
 }
