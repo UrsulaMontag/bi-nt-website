@@ -7,7 +7,7 @@ export const NavContainer = styled.nav`
 `;
 
 export const NavList = styled.ul`
-  z-index: 200;
+  z-index: 2;
 
   display: ${(props) => (props.showNav || props.showSubNav ? "flex" : "none")};
   flex-direction: column;
@@ -39,14 +39,10 @@ export const NavSubList = styled.ul`
   width: 100%;
   max-height: 80vh;
   overflow-y: auto;
-  background-color: #fff;
   transition: transform 0.3s ease-in-out;
   transform: ${({ showSubNav }) =>
     showSubNav ? "translateX(0)" : "translateX(-100%)"};
   z-index: 2;
-  @media (min-width: 768px) {
-    flex-direction: row;
-  }
 `;
 
 export const NavItem = styled.li`
@@ -56,11 +52,11 @@ export const NavItem = styled.li`
   }
 `;
 export const HamburgerMenu = styled.div`
+  z-index: 3;
   align-self: flex-end;
   cursor: pointer;
   color: black;
   margin: 4px 2px 0 0;
-
   > .hamburger-bar {
     display: block;
     height: 2px;
@@ -80,7 +76,6 @@ export const HamburgerMenu = styled.div`
   &.active {
     transition-delay: 0.8s;
     transform: rotate(45deg);
-    z-index: 10;
     color: black;
 
     > .hamburger-bar:nth-child(2) {

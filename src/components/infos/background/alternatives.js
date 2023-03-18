@@ -145,6 +145,11 @@ export default function Alternatives() {
         </Typography>
         <Pictures pictures={picturesGoodExample} />
       </section>
+      <section>
+        <Typography variant={"h3"}>
+          Wo ein Wille ist, ist auch ein Weg
+        </Typography>
+      </section>
     </ContentContainerFlexColumnGap>
   );
 }
