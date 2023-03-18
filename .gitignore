@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/pdf.worker.js
 /.gitignore
 /package-lock.json
 

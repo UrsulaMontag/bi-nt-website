@@ -23,6 +23,7 @@ export const StyledPicturesSlider = styled.section`
     height: auto;
     position: relative;
     overflow: hidden;
+    z-index: 1;
   }
 
   .slider-slide--active {
@@ -58,7 +59,7 @@ export const StyledPicturesSlider = styled.section`
     display: none;
   }
 
-  @media screen and (min-width: 790px) {
+  @media screen and (min-width: 1024px) {
     .slider {
       display: none;
     }
@@ -66,11 +67,11 @@ export const StyledPicturesSlider = styled.section`
 `;
 
 export const StyledPicturesGallery = styled.section`
-  @media screen and (max-width: 790px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 
-  @media screen and (min-width: 790px) {
+  @media screen and (min-width: 1024px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

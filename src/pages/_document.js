@@ -1,5 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import Document from "next/document";
+import Script from "next/script";
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
@@ -43,6 +44,8 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Kdam+Thmor+Pro&family=Roboto:wght@300;400;700;900&display=swap"
             rel="stylesheet"
           />
+          <Script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.js" />
+          <Script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js" />
         </Head>
         <body>
           <Main />
