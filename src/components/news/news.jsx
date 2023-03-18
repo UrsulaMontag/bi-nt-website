@@ -140,7 +140,7 @@ export default function News() {
           Das Narrativ, dass der Feudalismus mit all seinen Kronen und Thronen
           und jetzt sein Nachfolger, der Kapitalismus, das einzig mögliche
           System und das beste aller Systeme ist, sitzt tief verwurzelt in uns
-          und wird jeden Tag in verschiedenen Schattierungen auf's Neue erzählt,
+          und wird jeden Tag in verschiedenen Schattierungen auf`s Neue erzählt,
           fast immer und fast überall.
           <br />
           <br />
