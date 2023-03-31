@@ -14,6 +14,12 @@ export default function Typography({ children, variant, component, ...rest }) {
           {children}
         </StyledH2>
       );
+    case "h2-link":
+      return (
+        <StyledH2Link {...rest} as={component}>
+          {children}
+        </StyledH2Link>
+      );
     case "h3":
       return (
         <StyledH3 {...rest} as={component}>
@@ -44,11 +50,11 @@ export default function Typography({ children, variant, component, ...rest }) {
           {children}
         </StyledInfoText>
       );
-    case "info-head":
+    case "span-bold":
       return (
-        <StyledInfoHead {...rest} as={component}>
+        <StyledSpanBold {...rest} as={component}>
           {children}
-        </StyledInfoHead>
+        </StyledSpanBold>
       );
     case "login-info":
       return (
@@ -66,6 +72,16 @@ const StyledH1 = styled.h1`
 const StyledH2 = styled.h2`
   font-size: 2.2rem;
   font-family: "Roboto", sans-serif;
+`;
+const StyledH2Link = styled.h2`
+  font-size: 2.2rem;
+  font-family: "Roboto", sans-serif;
+  color: var(--accent-color-green);
+  font-weight: 550;
+  &:hover {
+    color: var(--accent-color-darker);
+    font-weight: 600;
+  }
 `;
 const StyledH3 = styled.h3`
   font-size: 1.6rem;
@@ -85,8 +101,8 @@ const StyledInfoText = styled.p`
   font-weight: 200;
   margin: 0.25rem 0 1rem;
 `;
-const StyledInfoHead = styled.span`
-  font-weight: 200;
+const StyledSpanBold = styled.span`
+  font-weight: 600;
 `;
 const StyledInfoLogin = styled.h2`
   font-size: 2.2rem;

@@ -1,4 +1,5 @@
-export default function Events() {
-    return <h1>Veranstaltungen</h1>;
-  }
-  
+import Events from "@/components/events/events";
+
+export default function events() {
+  return <Events />;
+}

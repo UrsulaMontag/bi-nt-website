@@ -9,3 +9,6 @@ export const StyledHeader = styled.header`
   right: 0;
   background-color: var(--color-light);
 `;
+export const StyledHeaderInBox = styled.div`
+  overflow: hidden;
+`;

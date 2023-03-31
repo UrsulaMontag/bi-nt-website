@@ -1,85 +1,56 @@
 import styled from "styled-components";
 
-export const StyledPicturesSlider = styled.section`
-  .slider {
-    z-index: 1;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: auto;
-  }
+export const StyledPicturesSlider = styled.div`
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
 
-  .slider-wrapper {
+  .picture-slider {
     display: flex;
-    width: 100vw;
-    z-index: -100;
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(${(props) => -props.selectedIndex * 100}%);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
   }
 
   .slider-slide {
-    flex: 1 0 100%;
+    flex-shrink: 0;
     width: 100%;
-    height: auto;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
+    height: 100%;
+    scroll-snap-align: start;
   }
 
   .slider-slide--active {
-    margin-right: 0;
+    border: 2px solid #000; /* add a border or other style to the active slide */
   }
 
-  .slider-controls {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
+  .slider-picture {
+    width: 100%;
   }
 
-  .slider-control {
-    margin: 5px 5px;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-    background-color: #aaa;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+  .picture-gallery {
+    display: none; /* hide the gallery by default */
   }
 
-  .slider-control:hover {
-    background-color: #888;
-  }
-  .slider-control--active {
-    background-color: #68b022;
-    border-color: #68b022;
-  }
-
-  .slider-control input[type="radio"] {
-    display: none;
-  }
-
-  @media screen and (min-width: 1024px) {
-    .slider {
-      display: none;
+  @media (min-width: 768px) {
+    .picture-slider {
+      display: none; /* hide the slider on desktop */
     }
-  }
-`;
 
-export const StyledPicturesGallery = styled.section`
-  @media screen and (max-width: 1024px) {
-    display: none;
-  }
+    .picture-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
 
-  @media screen and (min-width: 1024px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     .gallery-item {
-      position: relative;
-      overflow: hidden;
-      flex-basis: calc(33.33% - 10px);
-      margin-bottom: 1rem;
-      
+      width: 100%;
+    }
+
+    .gallery-picture {
+      width: 100%;
+    }
   }
 `;

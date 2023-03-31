@@ -128,13 +128,15 @@ export default function Alternatives() {
         <Typography variant={"h3"}>
           Konzeptvorschlag Alte Ziegelei | Kinder- und Jugendfarm
         </Typography>
-        <Pictures pictures={picturesChildFarm} />
+        <PictureCard picture={picturesChildFarm[0]} />
+        <PictureCard picture={picturesChildFarm[1]} />
       </section>
       <section>
         <Typography variant={"h3"}>
           Konzeptvorschlag Neugestaltung Altes Zementwerk
         </Typography>
-        <Pictures pictures={picturesNewLiving} />
+        <PictureCard picture={picturesNewLiving[0]} />
+        <PictureCard picture={picturesNewLiving[1]} />{" "}
       </section>
       <section>
         <PictureCard picture={pictureCrossSection} />

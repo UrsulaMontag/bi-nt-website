@@ -1,17 +1,23 @@
 import NavWithRouter from "../navbar/navbar";
 import Typography from "../base/typography";
-import { StyledHeader } from "./header.styled";
+import { StyledHeader, StyledHeaderInBox } from "./header.styled";
+import { StyledLink } from "../base/link.styled";
 
 export default function Header() {
   return (
     <StyledHeader>
-      <div>
-        <Typography variant={"h2"}>Bürger*innen-Initiative</Typography>
-        <Typography variant={"h2"}>Wurzeln im Beton</Typography>
+      <StyledHeaderInBox>
+        <StyledLink href="/" passHref>
+          <Typography variant={"h2-link"}>
+            Bürger*innen-Initiative
+            <br />
+            Wurzeln im Beton
+          </Typography>
+        </StyledLink>
         <Typography variant={"info-head"}>
           Ökologische und soziale Lösungen gemeinsam denken
         </Typography>
-      </div>
+      </StyledHeaderInBox>
       <NavWithRouter />
     </StyledHeader>
   );
