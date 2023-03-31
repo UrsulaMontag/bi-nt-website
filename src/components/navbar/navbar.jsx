@@ -8,6 +8,7 @@ import {
   NavSubList,
 } from "./navbar.styled";
 import { withRouter } from "next/router";
+import { StyledLink } from "../base/link.styled";
 
 const pages = {
   "/": { path: [], label: "Über Uns" },
@@ -75,7 +76,7 @@ const Nav = () => {
                 toggleSubNav(path);
               }}
             >
-              <Link
+              <StyledLink
                 href={path}
                 className={`${currentPath === path ? "active" : ""}, link`}
                 onClick={() => {
@@ -83,7 +84,7 @@ const Nav = () => {
                 }}
               >
                 {page?.label || path}
-              </Link>
+              </StyledLink>
             </div>
             {hasSubNav && (
               <NavSubList
@@ -91,7 +92,7 @@ const Nav = () => {
               >
                 {page.path.map((subPage) => (
                   <NavItem key={subPage.path} id={subPage.path}>
-                    <Link
+                    <StyledLink
                       href={path + subPage.path}
                       passHref
                       onClick={() => handleSubNavClick(path + subPage.path)}
@@ -100,7 +101,7 @@ const Nav = () => {
                       }, link`}
                     >
                       {subPage.label}
-                    </Link>
+                    </StyledLink>
                   </NavItem>
                 ))}
               </NavSubList>

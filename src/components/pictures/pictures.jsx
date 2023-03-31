@@ -1,67 +1,78 @@
 import PictureCard from "./picture-card";
-import { StyledPicturesSlider, StyledPicturesGallery } from "./pictures.styled";
-import { useState } from "react";
+import { StyledPicturesSlider } from "./pictures.styled";
+import { useEffect, useRef, useState } from "react";
 import { ContentContainerFlexColumnGap } from "../base/content-containerFlexColumnGap.styled";
+import { debounce } from "lodash";
 
 export default function Pictures({ pictures }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [viewportWidth, setViewportWidth] = useState(0);
+  const sliderRef = useRef(null);
 
-  const handleInputChange = (index) => {
-    console.log("selectedIndex", selectedIndex);
-    setSelectedIndex(index);
-    console.log("new index", index);
-  };
+  useEffect(() => {
+    const slider = sliderRef.current;
+
+    if (slider) {
+      const handleScroll = () => {
+        console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        const scrollPosition = slider.scrollLeft;
+        const slideWidth = slider.offsetWidth;
+        const index = Math.round(scrollPosition / slideWidth);
+        setSelectedIndex(index);
+      };
+
+      slider.addEventListener("scroll", handleScroll);
+      return () => {
+        slider.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, [pictures, selectedIndex]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportWidth(window.innerWidth);
+    };
+
+    // Wrap code that references `window` in a useEffect hook with an empty dependency array
+    // to ensure that it only runs on the client-side after the initial render
+    if (typeof window !== "undefined") {
+      setViewportWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+    }
+
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
+  }, []);
 
   return (
     <ContentContainerFlexColumnGap>
-      <StyledPicturesSlider selectedIndex={selectedIndex}>
-        {/**slider for mobile devices */}
-        <div className="slider">
-          <div className="slider-controls">
-            {pictures.map((_, index) => (
-              <label
-                key={index}
-                htmlFor={`slide-${index}`}
-                className={`slider-control ${
-                  index === selectedIndex ? "slider-control--active" : ""
-                }`}
-              >
-                <input
-                  type="radio"
-                  name="slider"
-                  id={`slide-${index}`}
-                  checked={selectedIndex === index}
-                  onChange={() => {
-                    handleInputChange(index);
-                    console.log("index", index);
-                  }}
-                />
-              </label>
-            ))}
-          </div>
-          <div className="slider-wrapper">
-            {pictures.map((picture, index) => (
-              <div
-                key={picture.id}
-                className={`slider-slide ${
-                  index === selectedIndex ? "slider-slide--active" : ""
-                }`}
-              >
-                <PictureCard picture={picture} />
+      <StyledPicturesSlider className="pictures">
+        <div className="picture-slider" ref={sliderRef}>
+          {pictures.map((picture, index) => (
+            <div
+              key={picture.id}
+              className={`slider-slide ${
+                index === selectedIndex ? "slider-slide--active" : ""
+              }`}
+            >
+              <PictureCard picture={picture} className="slider-picture" />
+            </div>
+          ))}
+        </div>
+
+        {viewportWidth >= 768 && (
+          <div className="picture-gallery">
+            {pictures.map((picture) => (
+              <div key={picture.id} className="gallery-item">
+                <PictureCard className="gallery-picture" picture={picture} />
               </div>
             ))}
           </div>
-        </div>
+        )}
       </StyledPicturesSlider>
-
-      {/**gallery for larger devices */}
-      <StyledPicturesGallery className="gallery">
-        {pictures.map((picture) => [
-          <div key={picture.id} className="gallery-item">
-            <PictureCard className="gallery-image" picture={picture} />
-          </div>,
-        ])}
-      </StyledPicturesGallery>
     </ContentContainerFlexColumnGap>
   );
 }

@@ -4,7 +4,7 @@ const GlobalStyle = createGlobalStyle`
 * {
     margin: 0;
     padding: 0;
-    color: none;
+    color: var(--color-dark);
     opacity: 1;
     box-sizing: border-box; 
     
@@ -23,9 +23,12 @@ const GlobalStyle = createGlobalStyle`
       
   }
   :root {
-    --color-light:  #F2F2F2;
-    --color-dark: #262223;
-    --accent-color-green: #155902;
+    --color-light:  #9F9FA609;
+    --color-dark: #262625;
+    --accent-color-green: #5EA653;
+    --accent-color-darker: #297349;
+    --accent-color-grey: #6F6E73;
+
       }
   
 `;

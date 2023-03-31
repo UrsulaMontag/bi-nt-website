@@ -12,14 +12,11 @@ export const NavList = styled.ul`
   display: ${(props) => (props.showNav || props.showSubNav ? "flex" : "none")};
   flex-direction: column;
   list-style-type: none;
-  margin: 0;
+  margin: 0 1.5rem 0 0.5rem;
   padding-top: 3rem;
   justify-content: flex-start;
   height: 100vh;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 100vw;
   background-color: var(--color-light);
   transition: transform 0.3s ease-in-out;
   transform: ${({ showNav }) =>
@@ -52,8 +49,10 @@ export const NavItem = styled.li`
   }
 `;
 export const HamburgerMenu = styled.div`
-  z-index: 3;
-  align-self: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 300;
   cursor: pointer;
   color: black;
   margin: 4px 2px 0 0;
@@ -103,6 +102,7 @@ export const HamburgerMenu = styled.div`
       background-color: transparent;
       border: none;
       outline: none;
+      z-index: 300;
     }
   }
 `;

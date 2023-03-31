@@ -14,18 +14,17 @@ export default function Home() {
           verschiedene Spezies zu erhalten. Wir haben es satt, die
           unwirtschaftlichen, wissenschaftlich rückständigen, unkreativen,
           bequemen Entscheidungen des gewählten Stadtrates Nürtingen und der
-          Stadtverwaltung wie Lemminge hinzunehmen.
-        </Typography>
-        <Typography variant={"body1"}>
-          Wir setzen unsere Tatkraft und Zeit, unsere Intelligenz und unser
-          Wissen, unsere Kreativität und Phantasie, unsere Solidarität und
-          Menschlichkeit ein, um gemeinsam einen besonderen und lebendigen
-          Lebensraum zu erhalten.
+          Stadtverwaltung wie Lemminge hinzunehmen. Wir setzen unsere Tatkraft
+          und Zeit, unsere Intelligenz und unser Wissen, unsere Kreativität und
+          Phantasie, unsere Solidarität und Menschlichkeit ein, um gemeinsam
+          einen besonderen und lebendigen Lebensraum zu erhalten.
         </Typography>
         <Typography variant={"body1"}>
           Wir wollen aufzeigen, dass es Alternativen gibt. Wohnraumschaffung
           kann mit langfristiger Wirtschaftlichkeit, Klimaschutz, Naturerhalt
-          und sozialen Fragen vereinbart werden.
+          und sozialen Fragen vereinbart werden. Wenn ihr euch informieren oder
+          mitmachen wollt, kommt zu unseren Treffen. Wir freuen uns über neue
+          Gesichter.
         </Typography>
       </article>
       <article>
