@@ -25,7 +25,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     display: flex;
     justify-content: center;
-  }
+  }}
+  
   :root {
     --color-light:  #9F9FA609;
     --color-dark: #262625;
