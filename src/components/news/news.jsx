@@ -22,12 +22,6 @@ export default function News() {
           layout="responsive"
         />
       </article>
-      <article>
-        <Typography variant={"h3"}>Auch ein Feminismus</Typography>
-        <Typography variant={"info"}>
-          -- Ein Gedicht über den aktuellen Zustand der Welt --
-        </Typography>
-      </article>
     </ContentContainerFlexColumnGap>
   );
 }

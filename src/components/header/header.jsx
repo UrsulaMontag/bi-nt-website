@@ -14,7 +14,7 @@ export default function Header() {
             Wurzeln im Beton
           </Typography>
         </StyledLink>
-        <Typography variant={"info-head"}>
+        <Typography variant={"info"}>
           Ökologische und soziale Lösungen gemeinsam denken
         </Typography>
       </StyledHeaderInBox>
