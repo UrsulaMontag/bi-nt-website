@@ -20,8 +20,13 @@ const GlobalStyle = createGlobalStyle`
       font-size: 1.6rem;
       overflow: hidden;
       color: var(--color-dark);
-      
   }
+  @media only screen and (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }}
+  
   :root {
     --color-light:  #9F9FA609;
     --color-dark: #262625;
