@@ -41,12 +41,13 @@ export const StyledPicturesSlider = styled.div`
 
     .picture-gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       grid-gap: 20px;
     }
 
     .gallery-item {
       width: 100%;
+      min-width: 35vw;
     }
 
     .gallery-picture {

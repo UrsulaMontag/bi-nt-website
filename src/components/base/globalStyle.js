@@ -20,6 +20,9 @@ const GlobalStyle = createGlobalStyle`
       font-size: 1.6rem;
       overflow: hidden;
       color: var(--color-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       
   }
   :root {

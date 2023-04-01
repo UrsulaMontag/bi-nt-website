@@ -8,7 +8,7 @@ export default function pictures() {
   return (
     <>
       <Typography variant={"h1"}>Bilder-Sammlung vom Gelände</Typography>
-      <Pictures pictures={pictures} />;
+      <Pictures pictures={pictures} />
     </>
   );
 }
