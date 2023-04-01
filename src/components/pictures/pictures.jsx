@@ -2,7 +2,6 @@ import PictureCard from "./picture-card";
 import { StyledPicturesSlider } from "./pictures.styled";
 import { useEffect, useRef, useState } from "react";
 import { ContentContainerFlexColumnGap } from "../base/content-containerFlexColumnGap.styled";
-import { debounce } from "lodash";
 
 export default function Pictures({ pictures }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -47,9 +46,30 @@ export default function Pictures({ pictures }) {
     };
   }, []);
 
+  const handleDotClick = (index) => {
+    setSelectedIndex(index);
+    sliderRef.current.scroll({
+      left: index * sliderRef.current.offsetWidth,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <ContentContainerFlexColumnGap>
       <StyledPicturesSlider className="pictures">
+        <div className="slider-dots">
+          {pictures.map((picture, index) => (
+            <div
+              key={picture.id}
+              className={`dot ${index === selectedIndex ? "active" : ""}`}
+              onClick={() => handleDotClick(index)}
+            >
+              <span className="dot-number">
+                {index === selectedIndex ? index + 1 : ""}
+              </span>
+            </div>
+          ))}
+        </div>
         <div className="picture-slider" ref={sliderRef}>
           {pictures.map((picture, index) => (
             <div

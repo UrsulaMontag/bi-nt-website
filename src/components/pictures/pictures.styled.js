@@ -9,6 +9,10 @@ export const StyledPicturesSlider = styled.div`
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    scroll-snap-stop: normal;
+    scrollbar-color: var(--accent-color-green);
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     margin-bottom: 20px;
     width: 100%;
@@ -23,11 +27,43 @@ export const StyledPicturesSlider = styled.div`
   }
 
   .slider-slide--active {
-    border: 2px solid #000; /* add a border or other style to the active slide */
+    border: 2px solid var(--accent-color-green);
+    padding: 0.3rem; /* add a border or other style to the active slide */
   }
 
   .slider-picture {
     width: 100%;
+  }
+
+  .slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .dot {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    margin: 0 0.25rem 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: var(--accent-color-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dot.active {
+    background-color: var(--accent-color-green);
+    color: #fff;
+  }
+
+  .dot-number {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: inherit;
   }
 
   .picture-gallery {

@@ -57,23 +57,23 @@
   },
   {
     "id": 9,
-    "img": "/Bilder/IMG_20230312_104147.JPG",
+    "img": "/Bilder/IMG_20230312_104147.jpg",
     "description": "Ansicht Bäume Gelände.",
-    "width": 2600,
-    "height": 4624
+    "width": 675,
+    "height": 1200
   },
   {
     "id": 10,
-    "img": "/Bilder/IMG_20230312_104411.JPG",
+    "img": "/Bilder/IMG_20230312_104411.jpg",
     "description": "Blick auf 'Villa Rustica' vom vorbeiführenden Weg.",
-    "width": 2600,
-    "height": 4624
+    "width": 1200,
+    "height": 675
   },
   {
     "id": 11,
-    "img": "/Bilder/IMG_20230312_104230.JPG",
+    "img": "/Bilder/IMG_20230312_104230.jpg",
     "description": "Blick vom Gelände auf angrenzende Wohnhäuser.",
-    "width": 4624,
-    "height": 2600
+    "width": 675,
+    "height": 1200
   }
 ]
