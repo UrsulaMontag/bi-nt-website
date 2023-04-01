@@ -29,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
   
   :root {
     --color-light:  #9F9FA609;
+    --color-light__header:  #F0F0FA;
     --color-dark: #262625;
     --accent-color-green: #5EA653;
     --accent-color-darker: #297349;

@@ -13,6 +13,8 @@ export default function PictureCard({ picture }) {
           height={picture.height}
         />
         <figcaption>{picture.description}</figcaption>
+        <br />
+        <figcaption>{picture.copyright ? picture.copyright : null}</figcaption>
       </figure>
     </StyledPictureCard>
   );

@@ -9,6 +9,10 @@ export const StyledPicturesSlider = styled.div`
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    scroll-snap-stop: normal;
+    scrollbar-color: var(--accent-color-green);
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     margin-bottom: 20px;
     width: 100%;
@@ -23,7 +27,7 @@ export const StyledPicturesSlider = styled.div`
   }
 
   .slider-slide--active {
-    border: 2px solid #000; /* add a border or other style to the active slide */
+    border: 2px solid var(--accent-color-green); /* add a border or other style to the active slide */
   }
 
   .slider-picture {

@@ -50,8 +50,8 @@ export const NavItem = styled.li`
 `;
 export const HamburgerMenu = styled.div`
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0.3rem;
+  right: 0.5rem;
   z-index: 300;
   cursor: pointer;
   color: black;

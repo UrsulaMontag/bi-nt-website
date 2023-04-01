@@ -2,7 +2,6 @@ import PictureCard from "./picture-card";
 import { StyledPicturesSlider } from "./pictures.styled";
 import { useEffect, useRef, useState } from "react";
 import { ContentContainerFlexColumnGap } from "../base/content-containerFlexColumnGap.styled";
-import { debounce } from "lodash";
 
 export default function Pictures({ pictures }) {
   const [selectedIndex, setSelectedIndex] = useState(0);

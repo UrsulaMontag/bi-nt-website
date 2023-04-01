@@ -7,7 +7,10 @@ export const StyledHeader = styled.header`
   position: sticky;
   top: 0;
   right: 0;
-  background-color: var(--color-light);
+  opacity: 1;
+  background-color: var(--color-light__header);
+  z-index: 100;
+  padding: 0 0.5rem;
 `;
 export const StyledHeaderInBox = styled.div`
   overflow: hidden;
