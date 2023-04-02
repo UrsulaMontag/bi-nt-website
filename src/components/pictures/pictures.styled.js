@@ -74,6 +74,9 @@ export const StyledPicturesSlider = styled.div`
     .picture-slider {
       display: none; /* hide the slider on desktop */
     }
+    .slider-dots {
+      display: none;
+    }
 
     .picture-gallery {
       display: grid;
