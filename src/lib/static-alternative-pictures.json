@@ -88,59 +88,5 @@
     "commit": "",
     "width": 934,
     "height": 656
-  },
-  {
-    "id": 11,
-    "img": "/pdf/folie16_1_B_cBoeri-Studio_Vertical-Forest_ph.Dimitar-Harizanov_MilanItaly_stylepark.jpg",
-    "description": "Mailand",
-    "copyright": "©Boeri Studio | Dimitar Harizanov",
-    "commit": "",
-    "width": 1410,
-    "height": 940
-  },
-  {
-    "id": 12,
-    "img": "/pdf/folie16_3_parkroyal-packering-singaapore.jpg",
-    "description": "Singapore",
-    "copyright": "©Parkroyal Packering Singapore, unsplash",
-    "commit": "",
-    "width": 275,
-    "height": 183
-  },
-  {
-    "id": 14,
-    "img": "/pdf/folie17_1_hundertwasser_darmstadt.jpg",
-    "description": "Darmstadt",
-    "copyright": "©Balles Medien e.K",
-    "commit": "",
-    "width": 400,
-    "height": 300
-  },
-  {
-    "id": 15,
-    "img": "/pdf/folie17_3_bangkok.jpg",
-    "description": "Bangkok",
-    "copyright": "©Prapan Napawongdee",
-    "commit": "",
-    "width": 1292,
-    "height": 1000
-  },
-  {
-    "id": 16,
-    "img": "/pdf/folie17_singapore_greenhotel.jpg",
-    "description": "Singapore",
-    "copyright": "©https://i.imgur.com/zqEBII4.jpg",
-    "commit": "",
-    "width": 700,
-    "height": 525
-  },
-  {
-    "id": 17,
-    "img": "/pdf/folie18_Steinhaus,_Rogner_Bad_Blumau_von_Friedensreich_Hundertwasser.jpg",
-    "description": "Bad Blumau",
-    "copyright": "©Renate Oberinger",
-    "commit": "",
-    "width": 800,
-    "height": 450
   }
 ]

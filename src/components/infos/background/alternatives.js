@@ -143,12 +143,6 @@ export default function Alternatives() {
       </section>
       <section>
         <Typography variant={"h3"}>
-          International beachtete Beispiele aus aller Welt
-        </Typography>
-        <Pictures pictures={picturesGoodExample} />
-      </section>
-      <section>
-        <Typography variant={"h3"}>
           Wo ein Wille ist, ist auch ein Weg
         </Typography>
       </section>
