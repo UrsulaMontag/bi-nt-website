@@ -8,11 +8,11 @@ export default function Events() {
       <article>
         <Typography variant={"h3"}>Regelmäßige Treffen</Typography>
         <Typography variant={"body1"}>
-          <span>Zweiwöchentlich</span>Montags ab dem <span>3.4.2023</span>in der
-          Silberburg, Wilhelmstr.1, 72622 Nürtingen
+          <span>Zweiwöchentlich </span>Montags ab dem <span>3.4.2023</span>
+          &shy; in der Silberburg, Wilhelmstr.1, 72622 Nürtingen
         </Typography>
       </article>
-      <article>
+      {/* <article>
         <Typography variant={"h3"}>Gemütliches Info-Treff</Typography>
         <Typography variant={"body1"}>
           <span>09.04.2023 </span>Nachmittags <span>Uhrzeit folgt </span>
@@ -23,7 +23,7 @@ export default function Events() {
           Kaffee und Kuchen (wer kann bringt etwas mit) und nachbarschaftlichen
           Gesprächen
         </Typography>
-      </article>
+      </article> */}
     </ContentContainerFlexColumnGap>
   );
 }
